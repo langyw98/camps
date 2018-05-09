@@ -1,0 +1,7 @@
+<!--pages/showCamps/showCamps.wxml-->
+<view class="v-title">
+  <text class="t-title">{{message}}</text>
+  <view wx:for="{{items}}" wx:key="id" wx:for-item="itemName">
+    {{itemName.id}}:{{itemName.title}}
+  </view>
+</view>
