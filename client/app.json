@@ -2,6 +2,7 @@
   "pages": [
     "pages/showCamps/showCamps",
     "pages/index/index",
+    
     "pages/addCgi/addCgi"
   ],
   "window": {

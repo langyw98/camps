@@ -22,6 +22,7 @@ Page({
         qcloud.login({
             success(result) {
                 if (result) {
+                  console.log("登录成功")
                     util.showSuccess('登录成功')
                     that.setData({
                         userInfo: result,
@@ -60,7 +61,7 @@ Page({
         this.setData({
             takeSession: e.detail.value
         })
-        this.doRequest()
+        // this.doRequest()
     },
 
     doRequest: function () {

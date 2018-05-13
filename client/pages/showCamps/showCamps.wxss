@@ -1,1 +1,10 @@
 /* pages/showCamps/showCamps.wxss */
+.action-btn-container{
+  position: fixed;
+  bottom: 0;
+  width: 90%
+}
+ .action-btn{
+  margin: auto;
+  width: 70%
+} 
