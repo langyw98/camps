@@ -4,9 +4,12 @@
     <view class="v-title">
       <text class="t-title">{{message}}</text>
       <view wx:for="{{items}}" wx:key="id" wx:for-item="itemName">
-        <view bindtap="click" id="{{itemName.id}}">
+         <view class="weui-cells__title"  bindtap="click" id="{{itemName.id}}">
+          {{itemName.title}}
+         </view>
+        <!-- <view bindtap="click" id="{{itemName.id}}">
           {{itemName.id}}:{{itemName.title}}
-        </view>
+        </view> -->
       </view>
     </view>
     <view class="weui-flex action-btn-container">

@@ -35,6 +35,7 @@ Page({
               code: res.code
             },
             success: function (res) {
+              getApp().data.openid = res.data.openid
               console.log(res.data.openid)
             }
           })
