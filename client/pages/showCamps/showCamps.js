@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // var that = this
+    var that = this
     // wx.request({
     //   url: 'https://wjjhol0l.qcloud.la/weapp/getcamps',
     //   success: function(res){
@@ -37,6 +37,17 @@ Page({
             success: function (res) {
               getApp().data.openid = res.data.openid
               console.log(res.data.openid)
+              wx.request({
+                url: 'https://wjjhol0l.qcloud.la/weapp/getcamps',
+                data:{
+                  openid: res.data.openid
+                },
+                success: function(res){
+                  that.setData({
+                    items: res.data.data.campslist
+                  })
+                }
+              })
             }
           })
         }
@@ -98,6 +109,8 @@ Page({
 
   click: function (e) {
     var idx = parseInt(e.currentTarget.id)
-    console.log(idx)
+    wx.navigateTo({
+      url: '/pages/topicList/topicList?wbb_id='+idx,
+    })
   }
 })
